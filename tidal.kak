@@ -7,7 +7,16 @@ define-command tidal-start-repl %{
 
 define-command tidal-send-line %{
     execute-keys x
-    evaluate-commands send-text
+    send-text
+}
+
+define-command tidal-send-block %{
+    execute-keys <a-a>p
+    send-text
+}
+
+define-command tidal-hush %{
+    send-text hush
 }
 
 hook global WinCreate .*\.tidal %{
