@@ -6,7 +6,11 @@ So far, it offers the following functions:
 - `:tidal-send-line` sends the current line to the repl
 - `:tidal-send-block` sends the current block (paragraph) to the repl
 
-`<c-e>` is bound to `:tidal-send-block`
+You could bind the `tidal-send-block` command to a key such as :
+
+```
+map global normal <c-e> ':tidal-send-block<ret>'
+```
 
 # WARNINGS
 
