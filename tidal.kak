@@ -11,7 +11,7 @@ define-command tidal-send-line %{
 }
 
 define-command tidal-send-block %{
-    execute-keys <a-a>p
+    execute-keys <a-i>p
     send-text
 }
 
