@@ -1,5 +1,6 @@
 :set -XOverloadedStrings
 :set prompt ""
+:set +m
 
 import Sound.Tidal.Context
 
