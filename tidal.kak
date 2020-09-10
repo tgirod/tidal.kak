@@ -22,3 +22,5 @@ define-command tidal-send-block %{
 hook global WinCreate .*\.tidal %{
     set-option window filetype haskell
 }
+
+map global normal <c-e> ':tidal-send-block<ret>'
