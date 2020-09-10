@@ -15,9 +15,9 @@ define-command tidal-send-block %{
     send-text
 }
 
-define-command tidal-hush %{
-    send-text hush
-}
+#define-command tidal-hush %{
+#    send-text hush
+#}
 
 hook global WinCreate .*\.tidal %{
     set-option window filetype haskell
