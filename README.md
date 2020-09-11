@@ -19,6 +19,7 @@ map global normal <c-h> ':tidal-hush<ret>'
 
 # WARNINGS
 
+**At the moment this is barely usable **- it looks like GHCi is not the easiest REPL to interact with. For example, if your code has tab indent, it will trigger GHCi's completion, even if you are in the middle of a multiline input. Crazy.
+
 A the moment the REPL is initiated with the `BootTidal.hs` file shipped with the plugin, not the one shipped with tidalcycles. The `tidal_plugin_path` should allow you to define the folder where to look for `BootTidal.hs`, but I haven't tested it.
 
-the `BootTidal.hs` file has been slightly modified, I just added `:set +m` to activate GHCi's multiline mode. Couldn't find a way to specify it from the flags.
