@@ -16,7 +16,13 @@ define-command tidal-send-line %{
 
 define-command tidal-send-block %{
     execute-keys <a-i>p
-    send-text
+    nop %sh{
+        tmux set-buffer -b kak_selection ":{
+${kak_selection}
+:}
+"
+    	tmux paste-buffer -b kak_selection -t "$kak_opt_tmux_repl_id"
+    }
 }
 
 define-command tidal-hush %{
