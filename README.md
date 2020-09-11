@@ -5,11 +5,13 @@ So far, it offers the following functions:
 - `:tidal-start-repl` opens up the tidal repl in a new pane. **do not forget to open kakoune inside tmux!**
 - `:tidal-send-line` sends the current line to the repl
 - `:tidal-send-block` sends the current block (paragraph) to the repl
+- `:tidal-hush` sends the hush command to the repl
 
-You could bind the `tidal-send-block` command to a key such as :
+You could bind those commands to keys such as :
 
 ```
 map global normal <c-e> ':tidal-send-block<ret>'
+map global normal <c-h> ':tidal-hush<ret>'
 ```
 
 # WARNINGS
