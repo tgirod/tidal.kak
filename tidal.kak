@@ -5,6 +5,10 @@ define-command tidal-start-repl %{
     tmux-focus
 }
 
+define-command tidal-start-superdirt %{
+    tmux-repl-window sclang "%opt{tidal_plugin_path}/superdirt.sc"
+}
+
 define-command tidal-send-line %{
     execute-keys x
     send-text
