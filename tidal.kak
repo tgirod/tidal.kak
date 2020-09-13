@@ -6,7 +6,7 @@ define-command tidal-start-repl %{
 }
 
 define-command tidal-start-superdirt %{
-    tmux-repl-window sclang "%opt{tidal_plugin_path}/superdirt.sc"
+    tmux-terminal-window sclang "%opt{tidal_plugin_path}/superdirt.sc"
 }
 
 define-command tidal-send-line %{
