@@ -1,7 +1,7 @@
 declare-option str tidal_plugin_path %sh{ dirname "$kak_source" }
 
-define-command tidal-start-repl %{
-    repl ghci -ghci-script "%opt{tidal_plugin_path}/BootTidal.hs"
+define-command -params 1 -file-completion tidal-start-repl %{
+    repl ghci -ghci-script "%arg{1}"
     tmux-focus
 }
 
