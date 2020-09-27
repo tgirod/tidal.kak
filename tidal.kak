@@ -1,12 +1,16 @@
-declare-option str tidal_plugin_path %sh{ dirname "$kak_source" }
+declare-option -docstring "tidal repl boot script" \
+	str tidal_boot_file "./BootTidal.hs"
 
-define-command -params 1 -file-completion -docstring "tidal-start-repl <boot.hs>: starts tidal repl using <boot.hs> as the boot script" tidal-start-repl %{
-    repl ghci -ghci-script "%arg{1}"
+declare-option -docstring "superdirt's boot script" \
+	str tidal_superdirt_file "./superdirt.sc"
+
+define-command tidal-start-repl -docstring "starts tidal repl" %{
+    repl ghci -ghci-script "%opt{tidal_boot_file}"
     tmux-focus
 }
 
-define-command tidal-start-superdirt -docstring "tidal-start-superdirt: starts supercollider and loads the superdirt synth" %{
-    tmux-terminal-window sclang "%opt{tidal_plugin_path}/superdirt.sc"
+define-command tidal-start-superdirt -docstring "starts the superdirt synth" %{
+    tmux-terminal-window sclang "%opt{tidal_superdirt_file}"
 }
 
 define-command -docstring "tidal-send-line: selects the current line and sends it to the REPL" tidal-send-line %{
