@@ -1,3 +1,9 @@
+# Detection
+
+hook global BufCreate .*[.](tidal) %{
+    set-option buffer filetype haskell
+}
+
 declare-option -docstring "tidal repl boot script" \
 	str tidal_boot_file "./BootTidal.hs"
 
@@ -32,9 +38,5 @@ ${kak_selection}
 define-command -docstring "tidal-hush: sends the hush command to the REPL" tidal-hush %{
     send-text "hush
 "
-}
-
-hook global WinCreate .*\.tidal %{
-    set-option window filetype haskell
 }
 
