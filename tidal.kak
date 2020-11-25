@@ -11,7 +11,7 @@ declare-option -docstring "superdirt's boot script" \
 	str tidal_superdirt_file "./superdirt.sc"
 
 define-command tidal-start-repl -docstring "starts tidal repl" %{
-    repl ghci -ghci-script "%opt{tidal_boot_file}"
+    repl "ghci -ghci-script %opt{tidal_boot_file}"
     tmux-focus
 }
 
