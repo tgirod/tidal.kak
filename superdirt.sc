@@ -1,3 +1,0 @@
-s.boot;
-SuperDirt.start;
-
