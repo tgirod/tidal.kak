@@ -55,7 +55,3 @@ ${kak_selection}
   }
 }
 
-hook global WinCreate .*\.tidal %{
-  set-option window filetype haskell
-  require-module tidal
-}
