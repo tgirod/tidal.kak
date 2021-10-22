@@ -35,7 +35,7 @@ provide-module tidal %{
 
   define-command -docstring "tidal-send-line: send the current line to tidal" tidal-send-line %{
     execute-keys x
-    send-text
+    repl-send-text
   }
 
   define-command -docstring "tidal-send-block: sends the current paragraph to the tidal" tidal-send-block %{
@@ -50,7 +50,7 @@ ${kak_selection}
   }
 
   define-command -docstring "tidal-send-hush: sends the hush command to the REPL" tidal-hush %{
-    send-text "hush
+    repl-send-text "hush
 "
   }
 }
